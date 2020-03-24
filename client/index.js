@@ -1,5 +1,5 @@
 var soap = require('soap');
-var url = 'https://obscure-plains-72326.herokuapp.com/wscalc1/?wsdl';
+var url = 'http://localhost:8001/wscalc1?wsdl';
 
 soap.createClient(url, function(err, client) {
     if (err) throw err;
