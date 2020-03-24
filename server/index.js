@@ -10,11 +10,11 @@ var service = {
         calc: {
           Add : function(args) {
                 var n = 1*args.intA + 1*args.intB;
-                return { AddResult : Math.round(n) };
+                return { AddResult : parseFloat(n).toFixed(2) };
             },
             Subtract : function(args) {
                 var n = 1*args.intA - 1*args.intB;
-                return { SubtractResult : Math.round(n) };
+                return { SubtractResult :parseFloat(n).toFixed(2) };
             }
         }
     }
