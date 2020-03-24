@@ -16,6 +16,22 @@
   <wsdl:message name="subResponse">
     <wsdl:part name="subres" type="xs:string"/>
   </wsdl:message>
+  <wsdl:message name="mulRequest">
+    <wsdl:part name="intA" type="xs:string"/>
+    <wsdl:part name="intB" type="xs:string"/>
+  </wsdl:message>
+
+  <wsdl:message name="mulResponse">
+    <wsdl:part name="subres" type="xs:string"/>
+  </wsdl:message>
+   <wsdl:message name="divRequest">
+    <wsdl:part name="intA" type="xs:string"/>
+    <wsdl:part name="intB" type="xs:string"/>
+  </wsdl:message>
+
+  <wsdl:message name="divResponse">
+    <wsdl:part name="subres" type="xs:string"/>
+  </wsdl:message>
   <wsdl:portType name="calcP">
     <wsdl:operation name="Add">
       <wsdl:input message="sumarRequest"/>
@@ -24,6 +40,14 @@
       <wsdl:operation name="Subtract">
       <wsdl:input message="subRequest"/>
       <wsdl:output message="subResponse"/>
+    </wsdl:operation>
+      <wsdl:operation name="Multiplicacao">
+      <wsdl:input message="mulRequest"/>
+      <wsdl:output message="mulResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="Divisao">
+      <wsdl:input message="divRequest"/>
+      <wsdl:output message="divResponse"/>
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="calcB" type="calcP">
@@ -39,6 +63,24 @@
     </wsdl:operation>
       <wsdl:operation name="Subtract">
       <soap:operation soapAction="Subtract"/>
+      <wsdl:input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Multiplicacao">
+      <soap:operation soapAction="Multiplicacao"/>
+      <wsdl:input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Divisao">
+      <soap:operation soapAction="Divisao"/>
       <wsdl:input>
         <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" use="literal"/>
       </wsdl:input>
