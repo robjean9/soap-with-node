@@ -10,12 +10,11 @@ var service = {
         calc: {
           Add : function(args) {
                 var n = 1*args.intA + 1*args.intB;
-                return { AddResult : n };
+                return { AddResult : Math.round(n) };
             },
-
-            multiplicar : function(args) {
-                var n = args.a * args.b;
-                return { mulres : n };
+            Subtract : function(args) {
+                var n = 1*args.intA - 1*args.intB;
+                return { SubtractResult : Math.round(n) };
             }
         }
     }
