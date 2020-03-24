@@ -22,7 +22,7 @@
   </wsdl:message>
 
   <wsdl:message name="mulResponse">
-    <wsdl:part name="subres" type="xs:string"/>
+    <wsdl:part name="mulres" type="xs:string"/>
   </wsdl:message>
    <wsdl:message name="divRequest">
     <wsdl:part name="intA" type="xs:string"/>
@@ -30,7 +30,7 @@
   </wsdl:message>
 
   <wsdl:message name="divResponse">
-    <wsdl:part name="subres" type="xs:string"/>
+    <wsdl:part name="divres" type="xs:string"/>
   </wsdl:message>
   <wsdl:portType name="calcP">
     <wsdl:operation name="Add">

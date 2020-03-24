@@ -8,7 +8,7 @@ soap.createClient(url, function(err, client) {
         if (err) throw err;
         console.log(res);
     });
-    client.Add({intA: 4,intB: 3},function(err,res){
+    client.Divisao({intA: 4,intB: 3},function(err,res){
         if (err) throw err;
         console.log(res);
     });

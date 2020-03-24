@@ -21,7 +21,7 @@ var service = {
               return { MultiplicacaoResult :parseFloat(n).toFixed(2) };
             },
             Divisao : function(args) {
-              var n = 1*args.intA / 1*args.intB;
+              var n = (1*args.intA) / (1*args.intB);
               return { DivisaoResult :parseFloat(n).toFixed(2) };
             }
         }
