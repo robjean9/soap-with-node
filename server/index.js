@@ -22,6 +22,15 @@ var service = {
 var xml = require('fs').readFileSync('myservice.wsdl', 'utf8');
 
 var server = http.createServer(function(request,response) {
+  response.setHeader('Access-Control-Allow-Origin', '*');
+	response.setHeader('Access-Control-Request-Method', '*');
+	response.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET');
+	response.setHeader('Access-Control-Allow-Headers', '*');
+	if ( request.method === 'OPTIONS' ) {
+		response.writeHead(200);
+		response.end();
+		return;
+	}
     response.end("404: Not Found: "+request.url);
 });
 
