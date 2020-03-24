@@ -6,9 +6,9 @@ var http = require('http');
 var service = {
     ws: {
         calc: {
-          sum : function(args) {
-                var n = 1*args.a + 1*args.b;
-                return { sumResponse : n };
+          Add : function(args) {
+                var n = 1*args.intA + 1*args.intA;
+                return { AddResult : n };
             },
 
             multiplicar : function(args) {
