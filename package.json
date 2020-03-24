@@ -1,0 +1,11 @@
+{
+  "name": "soap",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "soap": "^0.31.0",
+    "soap-server": "^0.1.0"
+  }
+}
