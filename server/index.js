@@ -9,7 +9,7 @@ var service = {
     ws: {
         calc: {
           Add : function(args) {
-                var n = 1*args.intA + 1*args.intA;
+                var n = 1*args.intA + 1*args.intB;
                 return { AddResult : n };
             },
 
